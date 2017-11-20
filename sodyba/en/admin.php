@@ -30,7 +30,7 @@ include_once 'dbconnect.php';
                             <li><a href="users_list.php">Users</a></li>                           
                             <li><p class="navbar-text">Welcome, <?php echo $_SESSION['email']; ?></p></li>
                             <li><a href="alogout.php">Logout</a></li>
-                        <?php } else { header("Location: user.php");?>
+                        <?php } else { header("Location: login.php");?>
                         <?php } ?>
                     </ul>
                 </div>

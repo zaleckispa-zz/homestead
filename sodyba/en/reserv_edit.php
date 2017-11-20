@@ -20,9 +20,9 @@ if (isset($_PUT['registruoti'])) {
     if (!$error) {
         if (mysqli_query($con, "UPDATE bookings SET date='" . $date . "', name='" . $name . "', email='" . $email . "', phone='" . $phone . "', "
             . " type='" . $type . "' WHERE id='$id'")) {
-            $successmsg = "Sėkmingai paredagavote užsakymą! <a href='reserv.php'>Paspauskite, kad grįžtumėte į užsakymų sąrašo langą.</a>";
+            $successmsg = "Successfully edited! <a href='reserv.php'>Click to go back.</a>";
         } else {
-            $errormsg = "Įvyko klaida...  Bandykite dar kartą!";
+            $errormsg = "Error...  Give it another try!";
         }
     }
 }
@@ -67,7 +67,7 @@ if (isset($_GET['id'])) {
                             <li><a href="users_list.php">Users</a></li>                           
                             <li><p class="navbar-text">Welcome, <?php echo $_SESSION['email']; ?></p></li>
                             <li><a href="alogout.php">Logout</a></li>
-                        <?php } else { header("Location: user.php");?>
+                        <?php } else { header("Location: login.php");?>
                         <?php } ?>
             </ul>
         </div>

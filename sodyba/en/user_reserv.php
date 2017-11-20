@@ -37,7 +37,7 @@ if (isset($_SESSION['delete'])) {
                             <li><a href="contact2.php">Contact</a></li>                            
                             <li><p class="navbar-text">Welcome, <?php echo $_SESSION['email']; ?></p></li>
                             <li><a href="logout.php">Logout</a></li>
-                        <?php } else { ?>
+                        <?php } else { header("Location: login.php");?>
                         <?php } ?>
             </ul>
         </div>
